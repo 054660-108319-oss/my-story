@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Portfolio</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link" data-en="Home" data-zh="首頁">Home</a>
+                <a href="about.html" class="nav-link" data-en="About" data-zh="關於我">About</a>
+                <a href="projects.html" class="nav-link active" data-en="Projects" data-zh="項目">Projects</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="language-toggle" id="languageToggle" aria-label="Toggle language" type="button">
+                    <span class="lang-text">中文</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 data-en="My Projects" data-zh="我的項目">My Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-image">🏛️</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-en="Interactive History Museum" data-zh="互動歷史博物館">Interactive History Museum</h3>
+                            <p data-en="An interactive web application showcasing historical events with a timeline, filters, and multimedia content. Built with vanilla JavaScript for smooth interactions." data-zh="一個互動式網絡應用程序，展示歷史事件、時間軸、過濾器和多媒體內容。使用原生 JavaScript 構建以實現流暢的交互。">An interactive web application showcasing historical events with a timeline, filters, and multimedia content. Built with vanilla JavaScript for smooth interactions.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://example.com/history-museum" class="project-link" data-en="Live Demo" data-zh="實時演示" target="_blank">Live Demo</a>
+                                <a href="https://github.com/yourname/history-museum" class="project-link" data-en="View Code" data-zh="查看代碼" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-image">📝</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-en="Todo List App" data-zh="待辦清單應用">Todo List App</h3>
+                            <p data-en="A simple yet functional todo list application with add, delete, and mark complete features. Demonstrates DOM manipulation and LocalStorage usage." data-zh="一個簡單但功能齊全的待辦清單應用程序，具有添加、刪除和標記完成功能。展示 DOM 操作和 LocalStorage 的使用。">A simple yet functional todo list application with add, delete, and mark complete features. Demonstrates DOM manipulation and LocalStorage usage.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://example.com/todo-app" class="project-link" data-en="Live Demo" data-zh="實時演示" target="_blank">Live Demo</a>
+                                <a href="https://github.com/yourname/todo-app" class="project-link" data-en="View Code" data-zh="查看代碼" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-image">🎨</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-en="Color Palette Generator" data-zh="配色調色板生成器">Color Palette Generator</h3>
+                            <p data-en="A tool that generates beautiful color palettes with one click. Users can lock colors and export palettes. Great for designers and developers." data-zh="一款一鍵生成美麗配色調色板的工具。用戶可以鎖定顏色並導出調色板。適合設計師和開發人員使用。">A tool that generates beautiful color palettes with one click. Users can lock colors and export palettes. Great for designers and developers.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://example.com/color-palette" class="project-link" data-en="Live Demo" data-zh="實時演示" target="_blank">Live Demo</a>
+                                <a href="https://github.com/yourname/color-palette" class="project-link" data-en="View Code" data-zh="查看代碼" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p id="copyright" data-en="© 2026 My Portfolio. All rights reserved." data-zh="© 2026 我的作品集。版權所有。">© 2026 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

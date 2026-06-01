@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Portfolio</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active" data-en="Home" data-zh="首頁">Home</a>
+                <a href="about.html" class="nav-link" data-en="About" data-zh="關於我">About</a>
+                <a href="projects.html" class="nav-link" data-en="Projects" data-zh="項目">Projects</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="language-toggle" id="languageToggle" aria-label="Toggle language" type="button">
+                    <span class="lang-text">中文</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 data-en="Hello, I'm a Web Developer" data-zh="你好，我是網頁開發者">Hello, I'm a Web Developer</h1>
+                <p data-en="A passionate student learning web development and creating interactive web experiences" data-zh="一位熱情的學生，正在學習網頁開發並創建互動式網站體驗">A passionate student learning web development and creating interactive web experiences</p>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn btn-primary" data-en="View My Work" data-zh="查看我的作品">View My Work</a>
+                    <a href="about.html" class="btn btn-secondary" data-en="Learn More" data-zh="了解更多">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p id="copyright" data-en="© 2026 My Portfolio. All rights reserved." data-zh="© 2026 我的作品集。版權所有。">© 2026 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Portfolio</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link" data-en="Home" data-zh="首頁">Home</a>
+                <a href="about.html" class="nav-link active" data-en="About" data-zh="關於我">About</a>
+                <a href="projects.html" class="nav-link" data-en="Projects" data-zh="項目">Projects</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="language-toggle" id="languageToggle" aria-label="Toggle language" type="button">
+                    <span class="lang-text">中文</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Me Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 data-en="About Me" data-zh="關於我">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-en="I'm a web development beginner with a passion for creating clean, user-friendly interfaces. I love learning new technologies and building projects that solve real-world problems." data-zh="我是一位網頁開發初學者，對創建簡潔、用戶友好的界面充滿熱情。我喜歡學習新技術並構建解決現實問題的項目。">I'm a web development beginner with a passion for creating clean, user-friendly interfaces. I love learning new technologies and building projects that solve real-world problems.</p>
+                        <p data-en="I specialize in front-end development with HTML, CSS, and JavaScript. I believe in writing clean code and creating accessible web experiences for everyone." data-zh="我專門從事 HTML、CSS 和 JavaScript 的前端開發。我相信編寫簡潔的代碼並為每個人創建可訪問的網絡體驗。">I specialize in front-end development with HTML, CSS, and JavaScript. I believe in writing clean code and creating accessible web experiences for everyone.</p>
+                    </div>
+                    <div class="skills">
+                        <h3 data-en="Skills" data-zh="技能">Skills</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Responsive Design</span>
+                            <span class="skill-tag">LocalStorage</span>
+                            <span class="skill-tag">Web API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p id="copyright" data-en="© 2026 My Portfolio. All rights reserved." data-zh="© 2026 我的作品集。版權所有。">© 2026 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
