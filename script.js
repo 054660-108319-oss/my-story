@@ -1,10 +1,16 @@
 // ===========================
-// Scroll Animations (全分頁完美防呆版)
+// Scroll Animations (完美安全版)
 // ===========================
 
 function setupScrollAnimations() {
     console.log('👀 Initializing Scroll Animations observer...');
     
+    // 🎯 這裡加上極限防呆：檢查瀏覽器是否支援 IntersectionObserver
+    if (!window.IntersectionObserver) {
+        console.log('ℹ️ Browser does not support IntersectionObserver. Skipping.');
+        return;
+    }
+
     const observerOptions = {
         threshold: 0.12,
         rootMargin: '0px 0px -40px 0px'
@@ -19,16 +25,16 @@ function setupScrollAnimations() {
         });
     }, observerOptions);
 
-    // 🎯 同時抓取所有可能出現在不同分頁的動畫元素
+    // 抓取頁面上的動畫元素
     const animatedElements = document.querySelectorAll('.reveal-item, .project-card, .skill-tag');
     
-    // 🛑【核心防呆】：如果這個分頁沒有任何需要動畫的元素，直接優雅退場，不讓瀏覽器報錯！
+    // 🛑 修正這裡：如果這頁沒有動畫元素，就「直接結束這個函數」，不會影響到其他功能！
     if (animatedElements.length === 0) {
-        console.log('ℹ️ No animation elements found on this page. Skipping observer.');
+        console.log('ℹ️ No animation elements found on this page.');
         return; 
     }
 
-    console.log(`📌 Found ${animatedElements.length} elements to animate on this page.`);
+    console.log(`📌 Found ${animatedElements.length} elements to animate.`);
 
     animatedElements.forEach((element) => {
         element.classList.add('reveal-init');
