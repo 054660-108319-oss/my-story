@@ -282,6 +282,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
 }
 
 .skill-tag {
@@ -300,6 +301,49 @@ body {
     color: white;
     border-color: var(--accent-color);
 }
+
+/* 數據卡片排版 */
+.stats-container {
+    display: flex;
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stat-icon { font-size: 1.8rem; margin-bottom: var(--spacing-xs); }
+.stat-number { font-size: 1.6rem; font-weight: bold; color: var(--accent-color); }
+.stat-label { color: var(--text-secondary); font-size: 0.9rem; }
+
+/* 目標排版 */
+.goals-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    background-color: var(--bg-color);
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.goal-icon { font-size: 1.8rem; }
 
 /* ===========================
    Projects Section
@@ -364,173 +408,57 @@ body {
 .project-tech {
     display: flex;
     gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
     flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
 }
-
 .project-tech span {
     background-color: var(--bg-color);
-    color: var(--accent-color);
-    padding: 4px 12px;
+    padding: 2px 8px;
     border-radius: 4px;
-    font-size: 0.85rem;
-    border: 1px solid var(--accent-color);
+    font-size: 0.8rem;
+    border: 1px solid var(--border-color);
 }
 
 .project-links {
     display: flex;
     gap: var(--spacing-md);
-    margin-top: auto;
 }
 
-.project-link {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    background-color: var(--accent-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: var(--transition);
-    border: 2px solid var(--accent-color);
-}
+/* ==========================================================================\
+   🚀 全新追加：三個主題大卡片外框與安全動畫
+   ========================================================================== */
 
-.project-link:hover {
-    background-color: var(--accent-hover);
-    border-color: var(--accent-hover);
-}
-
-/* ===========================
-   Footer
-   =========================== */
-
-.footer {
+.theme-card {
     background-color: var(--card-bg);
-    border-top: 1px solid var(--border-color);
-    padding: var(--spacing-lg);
-    text-align: center;
-    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow);
+    transition: border-color 0.3s ease;
 }
 
-/* ===========================
-   Responsive Design
-   =========================== */
-
-@media (max-width: 768px) {
-    .nav-container {
-        flex-wrap: wrap;
-        gap: var(--spacing-md);
-    }
-
-    .nav-menu {
-        width: 100%;
-        flex: none;
-        gap: var(--spacing-md);
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cta-buttons a {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .project-links {
-        flex-direction: column;
-    }
-
-    .section h2 {
-        font-size: 1.8rem;
-    }
+.theme-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-xs);
 }
 
-@media (max-width: 480px) {
-    :root {
-        --spacing-lg: 1.5rem;
-        --spacing-xl: 2rem;
-        --font-size-xl: 1.8rem;
-    }
-
-    .nav-container {
-        flex-wrap: wrap;
-        gap: var(--spacing-md);
-        padding: var(--spacing-md);
-    }
-
-    .nav-menu {
-        width: 100%;
-        gap: var(--spacing-sm);
-    }
-
-    .nav-link {
-        padding: var(--spacing-xs) 0;
-        font-size: 0.9rem;
-    }
-
-    .nav-controls {
-        gap: var(--spacing-sm);
-    }
-
-    .hero {
-        min-height: auto;
-        padding: var(--spacing-lg) var(--spacing-md);
-    }
-
-    .hero-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .skill-list {
-        justify-content: center;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section {
-        padding: var(--spacing-lg) var(--spacing-md);
-    }
+.skill-category-container {
+    margin-bottom: var(--spacing-md);
 }
 
-/* ===========================
-   Animations
-   =========================== */
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* 完美滾動隱形基礎規則 */
+.reveal-item, .project-card, .skill-tag {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.project-card,
-.skill-tag {
-    animation: fadeIn 0.5s ease forwards;
+/* 當進入畫面被加上 active 時，極速順暢歸位 */
+.reveal-item.active, .project-card.active, .skill-tag.active {
+    opacity: 1;
+    transform: translateY(0);
 }
-
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
