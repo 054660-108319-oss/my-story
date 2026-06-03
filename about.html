@@ -1,151 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - About</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">Portfolio</a>
-            </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link" data-en="Home" data-zh="首頁">Home</a>
-                <a href="about.html" class="nav-link active" data-en="About" data-zh="關於我">About</a>
-                <a href="projects.html" class="nav-link" data-en="Projects" data-zh="項目">Projects</a>
-            </div>
-            <div class="nav-controls">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
-                    <span class="theme-icon">🌙</span>
-                </button>
-                <button class="language-toggle" id="languageToggle" aria-label="Toggle language" type="button">
-                    <span class="lang-text">中文</span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- About Me Section -->
+<main>
         <section id="about" class="section about">
             <div class="container">
                 <h2 data-en="About Me" data-zh="關於我">About Me</h2>
                 
-                <!-- Introduction Section -->
-                <div class="intro-section">
-                    <h3 data-en="Hello, I'm Alan WU" data-zh="你好，我是吳東祐">Hello, I'm Alan WU</h3>
-                    <p data-en="A 12-year-old student studying in Vietnam" data-zh="一位在越南讀書的12歲學生">A 12-year-old student studying in Vietnam</p>
-                </div>
-
-                <!-- Who I Am Section with Progressive Reveal -->
-                <div class="who-am-i-section">
-                    <h3 data-en="Who I Am" data-zh="我是誰">Who I Am</h3>
-                    
-                    <!-- Stat Cards -->
-                    <div class="stats-container">
-                        <div class="stat-card reveal-item">
-                            <div class="stat-icon">🎂</div>
-                            <div class="stat-number">12</div>
-                            <div class="stat-label" data-en="Years Old" data-zh="歲">Years Old</div>
-                        </div>
-                        <div class="stat-card reveal-item">
-                            <div class="stat-icon">🌏</div>
-                            <div class="stat-number">3</div>
-                            <div class="stat-label" data-en="Languages" data-zh="語言">Languages</div>
-                        </div>
-                        <div class="stat-card reveal-item">
-                            <div class="stat-icon">💻</div>
-                            <div class="stat-number">∞</div>
-                            <div class="stat-label" data-en="Learning" data-zh="在學習">Learning</div>
-                        </div>
+                <div class="theme-card reveal-item">
+                    <div class="intro-section">
+                        <h3 data-en="Hello, I'm Alan WU" data-zh="你好，我是吳東祐">Hello, I'm Alan WU</h3>
+                        <p data-en="A 12-year-old student studying in Vietnam" data-zh="一位在越南讀書的12歲學生">A 12-year-old student studying in Vietnam</p>
                     </div>
 
-                    <!-- Bio Text with Progressive Reveal -->
-                    <div class="bio-text reveal-item">
-                        <p data-en="I'm passionate about web development, language learning, and building educational projects that make a difference. Currently studying in Vietnam while pursuing my dream of joining National Taiwan University's Computer Science program." data-zh="我熱衷於網頁開發、語言學習和開發有意義的教育項目。目前在越南讀書，同時追求進入台灣大學資訊工程系的夢想。">I'm passionate about web development, language learning, and building educational projects that make a difference. Currently studying in Vietnam while pursuing my dream of joining National Taiwan University's Computer Science program.</p>
+                    <div class="who-am-i-section">
+                        <h3 data-en="Who I Am" data-zh="我是誰">Who I Am</h3>
+                        <div class="stats-container">
+                            <div class="stat-card">
+                                <div class="stat-icon">🎂</div>
+                                <div class="stat-number">12</div>
+                                <div class="stat-label" data-en="Years Old" data-zh="歲">Years Old</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">🌏</div>
+                                <div class="stat-number">3</div>
+                                <div class="stat-label" data-en="Languages" data-zh="語言">Languages</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">💻</div>
+                                <div class="stat-number">∞</div>
+                                <div class="stat-label" data-en="Learning" data-zh="在學習">Learning</div>
+                            </div>
+                        </div>
+                        <div class="bio-text">
+                            <p data-en="I'm passionate about web development, language learning, and building educational projects that make a difference. Currently studying in Vietnam while pursuing my dream of joining National Taiwan University's Computer Science program." data-zh="我熱衷於網頁開發、語言學習和開發有意義的教育項目。目前在越南讀書，同時追求進入台灣大學資訊工程系的夢想。">I'm passionate about web development, language learning, and building educational projects that make a difference. Currently studying in Vietnam while pursuing my dream of joining National Taiwan University's Computer Science program.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Skills & Interests Section -->
-                <div class="skills-section">
-                    <h3 data-en="Skills & Interests" data-zh="技能與興趣">Skills & Interests</h3>
-                    
-                    <!-- Technical Skills -->
-                    <div class="skill-category-container reveal-item">
-                        <div class="skill-category">
-                            <h4 data-en="💻 Technical" data-zh="💻 技術">💻 Technical</h4>
-                            <div class="skill-list">
-                                <span class="skill-tag">HTML5</span>
-                                <span class="skill-tag">CSS3</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">Responsive Design</span>
+                <div class="theme-card reveal-item">
+                    <div class="skills-section">
+                        <h3 data-en="Skills & Interests" data-zh="技能與興趣">Skills & Interests</h3>
+                        
+                        <div class="skill-category-container">
+                            <div class="skill-category">
+                                <h4 data-en="💻 Technical" data-zh="💻 技術">💻 Technical</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">CSS3</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">Responsive Design</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Languages -->
-                    <div class="skill-category-container reveal-item">
-                        <div class="skill-category">
-                            <h4 data-en="🌐 Languages" data-zh="🌐 語言">🌐 Languages</h4>
-                            <div class="skill-list">
-                                <span class="skill-tag">English</span>
-                                <span class="skill-tag">中文 (Chinese)</span>
-                                <span class="skill-tag">Tiếng Việt (Vietnamese)</span>
+                        <div class="skill-category-container">
+                            <div class="skill-category">
+                                <h4 data-en="🌐 Languages" data-zh="🌐 語言">🌐 Languages</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">English</span>
+                                    <span class="skill-tag">中文 (Chinese)</span>
+                                    <span class="skill-tag">Tiếng Việt (Vietnamese)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Interests -->
-                    <div class="skill-category-container reveal-item">
-                        <div class="skill-category">
-                            <h4 data-en="🎯 Interests" data-zh="🎯 興趣">🎯 Interests</h4>
-                            <div class="skill-list">
-                                <span class="skill-tag">Web Development</span>
-                                <span class="skill-tag">Education Tech</span>
-                                <span class="skill-tag">Interactive Design</span>
+                        <div class="skill-category-container">
+                            <div class="skill-category">
+                                <h4 data-en="🎯 Interests" data-zh="🎯 興趣">🎯 Interests</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Web Development</span>
+                                    <span class="skill-tag">Education Tech</span>
+                                    <span class="skill-tag">Interactive Design</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Goals Section -->
-                <div class="goals-section">
-                    <h3 data-en="My Goals" data-zh="我的目標">My Goals</h3>
-                    <div class="goals-list">
-                        <div class="goal-item reveal-item">
-                            <div class="goal-icon">🚀</div>
-                            <p data-en="Build interactive web applications that solve real problems" data-zh="開發解決實際問題的互動式網絡應用">Build interactive web applications that solve real problems</p>
-                        </div>
-                        <div class="goal-item reveal-item">
-                            <div class="goal-icon">📚</div>
-                            <p data-en="Master multiple programming languages and frameworks" data-zh="掌握多種編程語言和框架">Master multiple programming languages and frameworks</p>
-                        </div>
-                        <div class="goal-item reveal-item">
-                            <div class="goal-icon">🎓</div>
-                            <p data-en="Get into National Taiwan University's Computer Science program" data-zh="進入台灣大學資訊工程系">Get into National Taiwan University's Computer Science program</p>
-                        </div>
-                        <div class="goal-item reveal-item">
-                            <div class="goal-icon">💡</div>
-                            <p data-en="Create educational projects that help others learn" data-zh="創建幫助他人學習的教育項目">Create educational projects that help others learn</p>
+                <div class="theme-card reveal-item">
+                    <div class="goals-section">
+                        <h3 data-en="My Goals" data-zh="我的目標">My Goals</h3>
+                        <div class="goals-list">
+                            <div class="goal-item">
+                                <div class="goal-icon">🚀</div>
+                                <p data-en="Build interactive web applications that solve real problems" data-zh="開發解決實際問題的互動式網絡應用">Build interactive web applications that solve real problems</p>
+                            </div>
+                            <div class="goal-item">
+                                <div class="goal-icon">📚</div>
+                                <p data-en="Master multiple programming languages and frameworks" data-zh="掌握多種編編程語言和框架">Master multiple programming languages and frameworks</p>
+                            </div>
+                            <div class="goal-item">
+                                <div class="goal-icon">🎓</div>
+                                <p data-en="Get into National Taiwan University's Computer Science program" data-zh="進入台灣大學資訊工程系">Get into National Taiwan University's Computer Science program</p>
+                            </div>
+                            <div class="goal-item">
+                                <div class="goal-icon">💡</div>
+                                <p data-en="Create educational projects that help others learn" data-zh="創建幫助他人學習的教育項目">Create educational projects that help others learn</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p id="copyright" data-en="© 2026 My Portfolio. All rights reserved." data-zh="© 2026 我的作品集。版權所有。">© 2026 My Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
