@@ -189,3 +189,48 @@ document.addEventListener('keydown', (e) => {
         toggleLanguage();
     }
 });
+// ==========================================================================\
+// 🚀 安全升級版：動態抓取 GitHub 個人資料狀態
+// ==========================================================================\
+async function getGitHubStats() {
+    const username = "054660-108319-oss";
+    const url = `https://api.github.com/users/${username}`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("GitHub API 回傳錯誤！可能是超出呼叫次數限制。");
+        
+        const data = await response.json();
+        
+        // 加上定時器，稍微延遲 100 毫秒，確保 HTML 標籤已經完全被瀏覽器渲染好
+        setTimeout(() => {
+            const statsContainer = document.querySelector('.github-stats');
+            
+            if (statsContainer) {
+                const repos = data.public_repos;
+                
+                // 灌入雙語資料
+                statsContainer.setAttribute('data-en', `🐙 GitHub Stats: ${repos} public repositories`);
+                statsContainer.setAttribute('data-zh', `🐙 GitHub 狀態：擁有 ${repos} 個公開專案`);
+                
+                // 根據當前語言更換文字
+                const currentLang = localStorage.getItem('portfolio-language') || 'en';
+                statsContainer.textContent = currentLang === 'en' 
+                    ? `🐙 GitHub Stats: ${repos} public repositories` 
+                    : `🐙 GitHub 狀態：擁有 ${repos} 個公開專案`;
+            }
+        }, 100);
+
+    } catch (error) {
+        console.error("GitHub API 發生錯誤:", error);
+        // 如果 API 卡住或爆了，1秒後自動降級成普通文字，不讓網頁無限期顯示「載入中」
+        setTimeout(() => {
+            const statsContainer = document.querySelector('.github-stats');
+            if (statsContainer) {
+                statsContainer.setAttribute('data-en', `🐙 GitHub: @054660-108319-oss`);
+                statsContainer.setAttribute('data-zh', `🐙 GitHub: @054660-108319-oss`);
+                statsContainer.textContent = `🐙 GitHub: @054660-108319-oss`;
+            }
+        }, 500);
+    }
+}
