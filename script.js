@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeLanguage();
     setupEventListeners();
     updateActiveNavLink();
+    
+    // 【新增】在網頁初始化時，自動去跟 GitHub 要數據
+    getGitHubStats();
+    
     console.log('✅ All systems stable. Ready to explore!');
 });
 
@@ -135,6 +139,42 @@ function updateActiveNavLink() {
             link.classList.add('active');
         }
     });
+}
+
+// ==========================================================================\
+// 🚀 【新增】動態抓取 GitHub 個人資料狀態（資工炫技 API）
+// ==========================================================================\
+async function getGitHubStats() {
+    const username = "054660-108319-oss";
+    const url = `https://api.github.com/users/${username}`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("API request failed");
+        
+        const data = await response.json();
+        const statsContainer = document.querySelector('.github-stats');
+        
+        if (statsContainer) {
+            const repos = data.public_repos;
+            
+            // 將最新的真實數據直接灌進雙語屬性中！
+            statsContainer.setAttribute('data-en', `🐙 GitHub Stats: ${repos} public repositories`);
+            statsContainer.setAttribute('data-zh', `🐙 GitHub 狀態：擁有 ${repos} 個公開專案`);
+            
+            // 根據當前本地儲存的語言設定，決定顯示文字
+            const currentLang = localStorage.getItem(LANGUAGE_KEY) || 'en';
+            statsContainer.textContent = currentLang === 'en' ? `🐙 GitHub Stats: ${repos} public repositories` : `🐙 GitHub 狀態：擁有 ${repos} 個公開專案`;
+        }
+    } catch (error) {
+        console.error("GitHub API Error:", error);
+        const statsContainer = document.querySelector('.github-stats');
+        if (statsContainer) {
+            statsContainer.setAttribute('data-en', `🐙 GitHub: @054660-108319-oss`);
+            statsContainer.setAttribute('data-zh', `🐙 GitHub: @054660-108319-oss`);
+            statsContainer.textContent = `🐙 GitHub: @054660-108319-oss`;
+        }
+    }
 }
 
 // ===========================
